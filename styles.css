@@ -1,6 +1,11 @@
 /* General Styles */
+@font-face {
+  font-family: 'Pokemon hollow';
+  src:format('truetype');
+}
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pokemon hollow', sans-serif;
   text-align: center;
   background-color: #ffcc00; /* Pokémon yellow */
   margin: 0;
@@ -8,6 +13,13 @@ body {
 }
 
 /* Header */
+h1 {
+  font-family: 'Pokemon hollow', sans-serif;
+  font-size: 40px;
+  color: #ffcc00; /* Pokémon yellow */
+  text-shadow: 3px 3px 0px #3466af, 6px 6px 0px #333; /* Blue shadow for 3D effect */
+}
+
 header {
   background-color: #ff4444;
   color: white;
@@ -18,19 +30,18 @@ header {
 /* Game Board */
 .board {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 100px); /* 4 columns */
   grid-gap: 15px;
   justify-content: center;
   margin: 0 auto;
   max-width: 500px;
+  padding: 20px;
 }
 
 /* Card Styles */
 .card {
   width: 100px;
   height: 140px;
-  background-color: white;
-  border: 2px solid black;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -38,10 +49,16 @@ header {
   transition: transform 0.5s;
 }
 
-/* When flipped, rotate the card */
+/* Flip Animation */
 .card.flipped {
   transform: rotateY(180deg);
 }
+
+/* Hover Effect */
+/* .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+} */
 
 /* Card Faces */
 .card .front,
@@ -53,26 +70,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
   border-radius: 10px;
+  border: 2px solid black;
 }
 
-/* Front - Pokémon name */
+/* Front - Pokémon Image */
 .card .front {
-  background-color: #fff;
-  color: black;
+  background-color: white;
   transform: rotateY(180deg);
 }
 
-/* Back - Pokéball image */
+/* Back - Pokéball Design */
 .card .back {
-  background-color: red;
-  color: white;
+  background: #3466af;
 }
 
+
 /* Reset Button */
-#reset-button {
+#restart-button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
@@ -81,8 +96,40 @@ header {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#reset-button:hover {
+#restart-button:hover {
   background-color: #0056b3;
+}
+
+/* Ensure all card images are properly sized */
+.card .front img,
+.card .back img {
+  width: 100%;  /* Makes the image take the full width of the card */
+  height: 100%; /* Ensures it fits within the card */
+  object-fit: contain; /* Keeps the image aspect ratio and fits it inside */
+  border-radius: 8px; /* Optional: Rounds the edges slightly */
+}
+
+/* Adjust card size for consistency */
+.card {
+  width: 100px;   /* Set a fixed width */
+  height: 140px;  /* Set a fixed height */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Ensure game board scales well */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 columns */
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
 }
