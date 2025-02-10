@@ -28,7 +28,7 @@ As a Pokémon fan, I wanted to create a fun and interactive way to engage with s
 - Pokémon images sourced from **[Pokémon Database](https://pokemondb.net/sprites)**
 - Font: **[Pokémon Solid Font](https://www.dafont.com/pokemon-solid.font)**
 - Other assets from **[OpenGameArt](https://opengameart.org/)**
-- Stack overflow
+- Stack overflow [link to support](https://stackoverflow.com/questions/53491354/trying-to-understand-this-code-for-a-memory-card-matching-game-project)
 
 
 ---
