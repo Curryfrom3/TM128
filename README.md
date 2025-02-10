@@ -2,7 +2,7 @@
 
 
 ## 🎮 Game Screenshot
-![Game Screenshot](./images/pokebball11.png)
+![Game Screenshot](./images/pokeball11.png)
 
 ## 🏆 Game Name & Description
 **Pokémon Memory Challenge**
